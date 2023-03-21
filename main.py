@@ -21,10 +21,14 @@ def main():
 
     option = int(input("Please enter an option: "))
 
-    if option == 1:
-        og_password = input("Please enter your password to encode: ")
-        encoded_password = encode(og_password)
-        print("Your password has been encoded and stored!")
+    while option != 3:
+        if option == 1:
+            og_password = input("Please enter your password to encode: ")
+            encoded_password = encode(og_password)
+            print("Your password has been encoded and stored!")
+        elif option == 3:
+            break
+        break
 
 if __name__ == "__main__":
     main()
