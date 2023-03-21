@@ -11,24 +11,31 @@ def encode(password):
         encoded_password_str += str(element)    # concatenate to empty string
     return encoded_password_str
 
-def main():
 
+
+def menu():
     print("Menu")
     print("-------------")
     print("1. Encode")
     print("2. Decode")
     print("3. Quit\n")
 
+
+
+def main():
+
+    menu()
     option = int(input("Please enter an option: "))
 
-    while option != 3:
+    while True:
         if option == 1:
             og_password = input("Please enter your password to encode: ")
             encoded_password = encode(og_password)
-            print("Your password has been encoded and stored!")
+            print("Your password has been encoded and stored!\n")
+            menu()
+            option = int(input("Please enter an option: "))
         elif option == 3:
             break
-        break
 
 if __name__ == "__main__":
     main()
