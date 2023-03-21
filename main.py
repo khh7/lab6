@@ -23,7 +23,7 @@ def main():
 
     if option == 1:
         og_password = input("Please enter your password to encode: ")
-        encode(og_password)
+        encoded_password = encode(og_password)
         print("Your password has been encoded and stored!")
 
 if __name__ == "__main__":
