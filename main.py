@@ -12,6 +12,9 @@ def encode(password):
     return encoded_password_str
 
 
+def decoded(password):
+    # for elizabeth!!!
+
 
 def menu():
     print("Menu")
@@ -32,6 +35,11 @@ def main():
             og_password = input("Please enter your password to encode: ")
             encoded_password = encode(og_password)
             print("Your password has been encoded and stored!\n")
+            menu()
+            option = int(input("Please enter an option: "))
+        elif option == 2:
+            decoded_password = decoded(encoded_password)  # j work w her own variable
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.\n")
             menu()
             option = int(input("Please enter an option: "))
         elif option == 3:
