@@ -1,20 +1,29 @@
 def encode(password):
 
-    password_list = list(password)  # turn int input into list
-    encoded_password_str = ""   # empty string to add new password to
+    password_list = list(password)
+    encoded_password_str = ""
 
     for element in password_list:
         element = int(element)
-        element += 3    # add three to each number
-        if element > 9: # if the added element is greater than 9, just take second value
+        element += 3
+        if element > 9:
             element %= 10
-        encoded_password_str += str(element)    # concatenate to empty string
+        encoded_password_str += str(element)
     return encoded_password_str
 
 
 def decoded(password):
-    # for elizabeth!!!
-    pass
+    password_list = list(password)
+    decoded_password_str = ""
+
+    for element in password_list:
+        element = int(element)
+        element -= 3
+        if element < 0:
+            element += 10
+        decoded_password_str += str(element)
+    return decoded_password_str
+
 
 def menu():
     print("Menu")
@@ -22,7 +31,6 @@ def menu():
     print("1. Encode")
     print("2. Decode")
     print("3. Quit\n")
-
 
 
 def main():
@@ -38,7 +46,7 @@ def main():
             menu()
             option = int(input("Please enter an option: "))
         elif option == 2:
-            decoded_password = decoded(encoded_password)  # j work w her own variable
+            decoded_password = decoded(encoded_password)    # j work w her own variable
             print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.\n")
             menu()
             option = int(input("Please enter an option: "))
