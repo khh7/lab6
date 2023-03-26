@@ -13,8 +13,14 @@ def encode(password):
 
 
 def decoded(password):
-    # for elizabeth!!!
-    pass
+    # for elizabeth!!
+    decoded_password = ""
+    for element in password:
+        element = int(element)
+        element -= 3
+        decoded_password += str(element)
+    return decoded_password
+
 
 def menu():
     print("Menu")
